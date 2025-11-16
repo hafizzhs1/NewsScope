@@ -1,0 +1,15 @@
+import streamlit as st
+
+def show():
+    st.title("ℹ️ Tentang Aplikasi NewsScope")
+    st.write("""
+    **NewsScope** adalah aplikasi pencari berita terkini dari berbagai sumber terpercaya.
+    Dibuat menggunakan **Python + Streamlit**, aplikasi ini memanfaatkan **NewsAPI** untuk mengambil berita berdasarkan kategori dan kata kunci.
+
+    **Fitur:**
+    - Cari berita berdasarkan topik tertentu.
+    - Pilih kategori berita seperti teknologi, olahraga, kesehatan, dan lain-lain.
+    - Menampilkan sumber dan tanggal publikasi.
+
+    **Dibuat oleh:** Muhammad al hafizh siregar
+    """)
