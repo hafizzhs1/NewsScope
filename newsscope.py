@@ -12,26 +12,15 @@ body {
     background-color: #111318;
     color: white;
 }
-
-/* Judul Dashboard */
 .dashboard-title {
-    text-align: center;
-    font-size: 2.3rem;
-    font-weight: 800;
-    color: #ff4b4b;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+    display: none; /* Tidak dipakai lagi */
 }
-
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-bottom: 2rem;
 }
-
 .nav-btn {
     background-color: #2b2f36;
     color: white;
@@ -41,16 +30,12 @@ body {
     cursor: pointer;
     border: none;
 }
-
 .nav-btn:hover {
     background-color: #3a3f47;
 }
-
 .nav-btn.active {
     background-color: #ff4b4b;
 }
-
-/* Hilangkan sidebar */
 section[data-testid="stSidebar"] {
     display: none;
 }
@@ -61,10 +46,8 @@ section[data-testid="stSidebar"] {
 if "page" not in st.session_state:
     st.session_state.page = "beranda"
 
-# ===== Judul Dashboard =====
-st.markdown('<div class="dashboard-title">📊 Dashboard</div>', unsafe_allow_html=True)
-
 # ===== Navbar =====
+# (Dashboard Title dihapus)
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -86,6 +69,7 @@ if st.session_state.page == "beranda":
     st.title("Selamat Datang di 📰 NewsScope!")
     st.write("Website untuk membantu Anda menemukan berita terbaru dari berbagai media terpercaya di Indonesia.")
     st.image("https://cdn-icons-png.flaticon.com/512/2965/2965879.png", width=150)
+    st.markdown("Gunakan menu cari berita untuk mulai mencari berita.")
 
 elif st.session_state.page == "cari":
     cari_berita.show()
