@@ -86,7 +86,7 @@ def fetch_rss(url):
 #     HALAMAN STREAMLIT
 def show():
     st.title("📰 Beberapa Berita Indonesia Terbaru")
-    st.write ("Cari berita dengan ketik kata kunci anda")
+    st.write ("Cari berita dengan ketik kata kunci anda, Contoh : Prabowo")
 
     # Hanya keyword
     keyword = st.text_input("Cari berita :")
@@ -137,3 +137,4 @@ def show():
 
 
                 st.markdown(f"[🔗 Baca Selengkapnya]({news['link']})")
+
