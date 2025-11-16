@@ -51,6 +51,9 @@ if "page" not in st.session_state:
     st.session_state.page = "beranda"
 
 # ===== Navbar =====
+st.markdown('<div class="dashboard-title">📊 Dashboard</div>', unsafe_allow_html=True)
+col1, col2, col3 = st.columns(3)
+
 with col1:
     if st.button("🏠 Beranda", use_container_width=True):
         st.session_state.page = "beranda"
@@ -75,6 +78,7 @@ elif st.session_state.page == "cari":
     cari_berita.show()
 elif st.session_state.page == "tentang":
     tentang.show()
+
 
 
 
