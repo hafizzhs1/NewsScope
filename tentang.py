@@ -8,8 +8,7 @@ def show():
 
     **Fitur:**
     - Cari berita berdasarkan topik tertentu.
-    - Pilih kategori berita seperti teknologi, olahraga, kesehatan, dan lain-lain.
     - Menampilkan sumber dan tanggal publikasi.
-
-    **Dibuat oleh:** Muhammad al hafizh siregar
+    Dibuat oleh: Muhammad al hafizh siregar
     """)
+
