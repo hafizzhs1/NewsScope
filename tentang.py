@@ -7,7 +7,9 @@ def show():
     Aplikasi ini dibangun menggunakan Python dan Streamlit
 
     **Fitur:**
-    - Cari berita berdasarkan topik tertentu.
+    - Cari berita berdasarkan kata kunci yang dicari.
     - Menampilkan sumber dan tanggal publikasi.
+    
     Dibuat oleh: Muhammad al hafizh siregar
     """)
+
