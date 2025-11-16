@@ -5,13 +5,24 @@ import tentang
 # ===== Konfigurasi Halaman =====
 st.set_page_config(page_title="NewsScope", page_icon="📰", layout="centered")
 
-# ===== CSS =====
+# ===== CSS GLOBAL =====
 st.markdown("""
 <style>
+/* Background */
 body {
     background-color: #111318;
     color: white;
 }
+
+/* Hilangkan header dan footer Streamlit */
+header[data-testid="stHeader"] {
+    display: none;
+}
+footer {
+    visibility: hidden;
+}
+
+/* Judul Dashboard */
 .dashboard-title {
     text-align: center;
     font-size: 2rem;
@@ -19,12 +30,15 @@ body {
     color: #ff4b4b;
     margin-bottom: 1rem;
 }
+
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-bottom: 2rem;
 }
+
 .nav-btn {
     background-color: #2b2f36;
     color: white;
@@ -34,12 +48,16 @@ body {
     cursor: pointer;
     border: none;
 }
+
 .nav-btn:hover {
     background-color: #3a3f47;
 }
+
 .nav-btn.active {
     background-color: #ff4b4b;
 }
+
+/* Sembunyikan sidebar kiri */
 section[data-testid="stSidebar"] {
     display: none;
 }
@@ -52,6 +70,7 @@ if "page" not in st.session_state:
 
 # ===== Navbar =====
 st.markdown('<div class="dashboard-title">📊 Dashboard</div>', unsafe_allow_html=True)
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -68,18 +87,16 @@ with col3:
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-# ===== Routing manual =====
+# ===== Routing Manual =====
 if st.session_state.page == "beranda":
     st.title("Selamat Datang di 📰 NewsScope!")
-    st.write("Website untuk membantu Anda menemukan berita terbaru dari berbagai media terpercaya di Indonesia, semuanya dalam satu tempat. Cukup ketik kata kunci yang Anda inginkan, dan NewsScope akan menampilkan rangkuman berita lengkap beserta gambar dan sumber aslinya.📰")
+    st.write("Website untuk membantu Anda menemukan berita terbaru dari berbagai media terpercaya di Indonesia, semuanya dalam satu tempat.")
+    st.write("Cukup ketik kata kunci yang Anda inginkan, dan NewsScope akan menampilkan rangkuman berita lengkap beserta gambar dan sumber aslinya.")
     st.image("https://cdn-icons-png.flaticon.com/512/2965/2965879.png", width=150)
     st.markdown("Gunakan menu cari berita untuk mulai mencari berita.")
+
 elif st.session_state.page == "cari":
     cari_berita.show()
+
 elif st.session_state.page == "tentang":
     tentang.show()
-
-
-
-
-
