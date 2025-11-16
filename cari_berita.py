@@ -89,7 +89,7 @@ def show():
     st.write ("Cari berita dengan ketik kata kunci anda")
 
     # Hanya keyword
-    keyword = st.text_input("Cari berita (opsional):")
+    keyword = st.text_input("Cari berita :")
 
     # Daftar media Indonesia
     sources = {
@@ -134,5 +134,6 @@ def show():
                 st.write(f"🗞 Sumber: **{news['source']}**")
                 st.write(f"📅 {news['pubDate']}")
                 st.write(news["description"])
+
 
                 st.markdown(f"[🔗 Baca Selengkapnya]({news['link']})")
