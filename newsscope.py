@@ -71,12 +71,13 @@ st.markdown("<br>", unsafe_allow_html=True)
 # ===== Routing manual =====
 if st.session_state.page == "beranda":
     st.title("Selamat Datang di 📰 NewsScope!")
-    st.write("Website untuk membantu Anda menemukan berita terbaru dari berbagai media terpercaya di Indonesia, semuanya dalam satu tempat. Cukup ketik kata kunci yang Anda inginkan, dan NewsScope akan menampilkan rangkuman berita lengkap beserta gambar dan sumber aslinya.")
+    st.write("Website untuk membantu Anda menemukan berita terbaru dari berbagai media terpercaya di Indonesia, semuanya dalam satu tempat. Cukup ketik kata kunci yang Anda inginkan, dan NewsScope akan menampilkan rangkuman berita lengkap beserta gambar dan sumber aslinya.📰")
     st.image("https://cdn-icons-png.flaticon.com/512/2965/2965879.png", width=150)
     st.markdown("Gunakan menu cari berita untuk mulai mencari berita.")
 elif st.session_state.page == "cari":
     cari_berita.show()
 elif st.session_state.page == "tentang":
     tentang.show()
+
 
 
