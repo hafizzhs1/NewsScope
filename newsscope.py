@@ -47,7 +47,6 @@ if "page" not in st.session_state:
     st.session_state.page = "beranda"
 
 # ===== Navbar =====
-# (Dashboard Title dihapus)
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -76,3 +75,4 @@ elif st.session_state.page == "cari":
 
 elif st.session_state.page == "tentang":
     tentang.show()
+
